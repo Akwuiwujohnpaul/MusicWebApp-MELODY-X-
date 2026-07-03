@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Now Playing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="nowPlayingBody">
+    <form action="search.html">
+      <div class="nowPlayingContainer">
+        <div class="nowPlayingHead">
+          <div class="logo">
+            <a href="index.html" class="nowPlayingLink">
+              <i class="fa-solid fa-wave-square"></i>
+              <h3>Melody<span class="x">X</span></h3></a
+            >
+          </div>
+
+          <div class="input">
+            <input
+              class="nowPlayingInput"
+              type="text"
+              placeholder="Search songs, artists, albums..."
+            />
+          </div>
+
+          <div class="right">
+            <div class="toggle">
+              <i class="fa-solid fa-sun"></i>
+              <i class="fa-regular fa-moon"></i>
+            </div>
+            <div class="notification">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="user">
+              <img src="images/luffy.png" alt="" class="userImage" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nowPlayingContainer"></div>
+
+      <div class="nowPlayingContainer">
+        <div class="nowPlaingTail">
+          <div class="nowPlayingLeft">
+            <div class="queueSong">
+              <img src="images/noImage.jpg" alt="" />
+              <div class="queueSongText">
+                <p>xxxx</p>
+                <p>xxxx</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nowPlayingBottomMiddle">
+            <div class="fontControl">
+              <i class="fa-solid fa-shuffle"></i>
+              <i class="fa-solid fa-caret-left"></i>
+              <i class="fa-solid fa-play"></i>
+              <i class="fa-solid fa-caret-right"></i>
+              <i class="fa-solid fa-repeat"></i>
+            </div>
+            <input
+              class="progressBar"
+              type="range"
+              id="volumeSlider"
+              min="0"
+              max="100"
+              value="1"
+              step="1"
+            />
+          </div>
+          <div class="nowPlayingRight">
+            <i class="fa-solid fa-expand"></i>
+          </div>
+        </div>
+      </div>
+      <audio class="audio"></audio>
+      <div class="spinner"></div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

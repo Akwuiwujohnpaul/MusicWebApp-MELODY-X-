@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="animation.css" />
+
+    <title>MelodyX | Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ================= LEFT SIDE ================= -->
+
+      <section class="leftSide">
+        <div class="logo">
+          <i class="fa-solid fa-wave-square"></i>
+
+          <h2>Melody<span>X</span></h2>
+        </div>
+
+        <div class="heroContent">
+          <img
+            src="images/headphoneGirl.png"
+            alt="Music Girl"
+            class="heroImage"
+          />
+
+          <div class="floatingNote note1">
+            <i class="fa-solid fa-music"></i>
+          </div>
+
+          <div class="floatingNote note2">
+            <i class="fa-solid fa-music"></i>
+          </div>
+
+          <div class="floatingNote note3">
+            <i class="fa-solid fa-music"></i>
+          </div>
+
+          <h1>
+            Music for every
+            <span>moment</span>
+          </h1>
+
+          <p>
+            Discover, stream and enjoy millions of songs. Create playlists and
+            share your favourite music with the world.
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="featureIcon">
+              <i class="fa-solid fa-music"></i>
+            </div>
+
+            <div>
+              <h3>Millions of Songs</h3>
+
+              <p>Access a huge music library.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="featureIcon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div>
+              <h3>Your Playlists</h3>
+
+              <p>Create and manage playlists.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="featureIcon">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+
+            <div>
+              <h3>Share & Connect</h3>
+
+              <p>Share music with friends.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= RIGHT SIDE ================= -->
+
+      <section class="rightSide">
+        <div class="authCard">
+          <!-- Tabs -->
+
+          <div class="tabs">
+            <button class="tab active">Login</button>
+
+            <button class="tab">Register</button>
+          </div>
+
+          <!-- Login Form -->
+
+          <form class="authForm">
+            <h2>Welcome <span>Back</span></h2>
+
+            <p class="subtitle">Login to continue to MelodyX</p>
+
+            <!-- Email -->
+
+            <div class="inputGroup">
+              <label>Email or Username</label>
+
+              <div class="inputField">
+                <i class="fa-regular fa-user"></i>
+
+                <input type="text" placeholder="Enter your email or username" />
+              </div>
+            </div>
+
+            <!-- Password -->
+
+            <div class="inputGroup">
+              <label>Password</label>
+
+              <div class="inputField">
+                <i class="fa-solid fa-lock"></i>
+
+                <input type="password" placeholder="Enter your password" />
+
+                <i class="fa-regular fa-eye togglePassword"></i>
+              </div>
+            </div>
+
+            <!-- Remember -->
+
+            <div class="remember">
+              <label>
+                <input type="checkbox" />
+
+                Remember me
+              </label>
+
+              <a href="#"> Forgot Password? </a>
+            </div>
+
+            <!-- Button -->
+
+            <button class="loginBtn">Login</button>
+
+            <!-- Divider -->
+
+            <div class="divider">
+              <span>or</span>
+            </div>
+
+            <!-- Social -->
+
+            <button class="socialBtn google">
+              <i class="fa-brands fa-google"></i>
+
+              Continue with Google
+            </button>
+
+            <button class="socialBtn facebook">
+              <i class="fa-brands fa-facebook"></i>
+
+              Continue with Facebook
+            </button>
+
+            <!-- Footer -->
+
+            <p class="footerText">
+              Don't have an account?
+
+              <a href="#"> Register here </a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

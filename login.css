@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #090b13;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.leftSide {
+  position: relative;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, #8a2be2 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #ff3cac 0%, transparent 35%),
+    #0b1020;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo i {
+  font-size: 32px;
+  color: #b06cff;
+}
+
+.logo h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #ff53c6;
+}
+
+.heroContent {
+  text-align: center;
+  position: relative;
+}
+
+.heroImage {
+  width: 380px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 35px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45));
+}
+
+.heroContent h1 {
+  font-size: 55px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 span {
+  color: #d76bff;
+}
+
+.heroContent p {
+  max-width: 520px;
+  margin: auto;
+  color: #c5c7d4;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.floatingNote {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: float 4s ease-in-out infinite;
+}
+
+.floatingNote i {
+  color: #ff53c6;
+  font-size: 20px;
+}
+
+.note1 {
+  top: 15%;
+  left: 12%;
+}
+
+.note2 {
+  right: 10%;
+  top: 30%;
+  animation-delay: 1.2s;
+}
+
+.note3 {
+  bottom: 28%;
+  left: 20%;
+  animation-delay: 2.2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 18px;
+  border-radius: 18px;
+  transition: 0.35s;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.featureIcon {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #8a2be2, #ff3cac);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.feature p {
+  color: #b8bbca;
+  font-size: 15px;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: #0f1424;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.tabs {
+  display: flex;
+  background: #171d30;
+  border-radius: 50px;
+  padding: 6px;
+  margin-bottom: 35px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #9fa7c1;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #8a2be2, #ff3cac);
+  color: #fff;
+}
+
+.tab:hover {
+  color: #fff;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.authForm h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.authForm h2 span {
+  color: #d76bff;
+}
+
+.subtitle {
+  color: #9fa7c1;
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.inputGroup {
+  margin-bottom: 22px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 10px;
+  color: #cfd2dd;
+  font-size: 14px;
+}
+
+.inputField {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #171d30;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 15px 18px;
+  transition: 0.3s;
+}
+
+.inputField:focus-within {
+  border-color: #8a2be2;
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.18);
+}
+
+.inputField i:first-child {
+  color: #8a2be2;
+}
+
+.inputField input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.inputField input::placeholder {
+  color: #7f879d;
+}
+
+.togglePassword {
+  cursor: pointer;
+  color: #8b92ab;
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.remember label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b9bfd1;
+}
+
+.remember input {
+  accent-color: #8a2be2;
+}
+
+.remember a {
+  color: #c86cff;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   LOGIN BUTTON
+=========================== */
+
+.loginBtn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8a2be2, #ff3cac);
+  transition: 0.35s;
+}
+
+.loginBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.35);
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.divider span {
+  margin: 0 15px;
+  color: #8d95ae;
+  font-size: 14px;
+}
+
+/* ===========================
+   SOCIAL BUTTONS
+=========================== */
+
+.socialBtn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #171d30;
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.socialBtn i {
+  margin-right: 10px;
+}
+
+.google:hover {
+  background: #242d48;
+}
+
+.facebook:hover {
+  background: #242d48;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footerText {
+  margin-top: 25px;
+  text-align: center;
+  color: #aeb5c9;
+}
+
+.footerText a {
+  color: #d76bff;
+  font-weight: 600;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .leftSide {
+    display: none;
+  }
+
+  .rightSide {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .authCard {
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .authForm h2 {
+    font-size: 28px;
+  }
+
+  .tabs {
+    margin-bottom: 25px;
+  }
+
+  .remember {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

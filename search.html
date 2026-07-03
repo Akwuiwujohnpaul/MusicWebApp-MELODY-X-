@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="spinner.css" />
+    <title>Search</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="sideBar">
+        <div class="logo">
+          <i class="fa-solid fa-wave-square"></i>
+          <h3>Melody<span class="x">X</span></h3>
+        </div>
+
+        <div class="optionContainer">
+          <a href="index.html">
+            <div class="options homePage">
+              <i class="fa-solid fa-house"></i>
+              <p>Home</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-brands fa-itunes-note"></i>
+            <p>Trending</p>
+          </div>
+
+          <a href="search.html" class="searchPage">
+            <div class="options">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Search</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-regular fa-heart"></i>
+            <p>Favorites</p>
+          </div>
+
+          <a href="playlist.html">
+            <div class="options playlistPage">
+              <i class="fa-regular fa-headphones"></i>
+              <p>Playlists</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="library">
+          <h3 class="libHead">LIBRARY</h3>
+
+          <a>
+            <div class="options likedSongsPage">
+              <i class="fa-regular fa-heart"></i>
+              <p>Liked Songs</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-solid fa-image"></i>
+            <p>Albums</p>
+          </div>
+
+          <div class="options">
+            <i class="fa-regular fa-headphones"></i>
+            <p>Artists</p>
+          </div>
+
+          <div class="options">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <p>Recently Played</p>
+          </div>
+        </div>
+
+        <div class="playLists">
+          <div class="playlistHeader">
+            <h3>PLAYLISTS</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <button class="newPlaylistButton">
+            <i class="fa-solid fa-plus"></i> <span>New Playlist</span>
+          </button>
+        </div>
+      </section>
+
+      <form action="search.html" class="searchForm">
+        <section class="sectionMain">
+          <div class="mainBody">
+            <!-- Existing Header -->
+            <div class="mainBodyHeader">
+              <div class="input">
+                <input
+                  class="search"
+                  type="text"
+                  name="search-term"
+                  placeholder="Search songs, artists, albums..."
+                />
+              </div>
+
+              <div class="right">
+                <div class="toggle">
+                  <i class="fa-solid fa-sun"></i>
+                  <i class="fa-regular fa-moon"></i>
+                </div>
+
+                <div class="notification">
+                  <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div class="user">
+                  <img src="images/luffy.png" alt="" class="userImage" />
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= SEARCH CONTENT ================= -->
+
+            <div class="searchContent">
+              <!-- Popular Searches -->
+              <section class="popularSearches">
+                <h3>Popular Searches</h3>
+              </section>
+
+              <section class="results">
+                <h3>Results</h3>
+              </section>
+            </div>
+          </div>
+        </section>
+        <audio class="searchAudio"></audio>
+        <div class="spinner"></div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

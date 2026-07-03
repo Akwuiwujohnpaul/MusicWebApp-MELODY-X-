@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="spinner.css" />
+    <title>Playlist</title>
+  </head>
+  <body class="playListBody">
+    <div class="container">
+      <section class="sideBar">
+        <div class="logo">
+          <i class="fa-solid fa-wave-square"></i>
+          <h3>Melody<span class="x">X</span></h3>
+        </div>
+
+        <div class="optionContainer">
+          <a href="index.html">
+            <div class="options homePage">
+              <i class="fa-solid fa-house"></i>
+              <p>Home</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-brands fa-itunes-note"></i>
+            <p>Trending</p>
+          </div>
+
+          <a href="search.html" class="searchPage">
+            <div class="options">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Search</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-regular fa-heart"></i>
+            <p>Favorites</p>
+          </div>
+
+          <a href="playlist.html">
+            <div class="options playlistPage">
+              <i class="fa-regular fa-headphones"></i>
+              <p>Playlists</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="library">
+          <h3 class="libHead">LIBRARY</h3>
+
+          <a href="likedSongs.html">
+            <div class="options likedSongsPage">
+              <i class="fa-regular fa-heart"></i>
+              <p>Liked Songs</p>
+            </div>
+          </a>
+
+          <a href="albums.html">
+            <div class="options">
+              <i class="fa-solid fa-image"></i>
+              <p>Albums</p>
+            </div>
+          </a>
+
+          <a href="artists.html">
+            <div class="options">
+              <i class="fa-regular fa-headphones"></i>
+              <p>Artists</p>
+            </div>
+          </a>
+
+          <a href="recentlyPlayed.html">
+            <div class="options">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <p>Recently Played</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="playLists">
+          <div class="playlistHeader">
+            <h3>PLAYLISTS</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="playListInput">
+            <div class="leftControl"></div>
+            <div class="rightControl"></div>
+          </div>
+        </div>
+        <button class="newPlaylistButton">
+          <i class="fa-solid fa-plus"></i> <span>New Playlist</span>
+        </button>
+      </section>
+
+      <section class="likedSection">
+        <div class="favouriteHeader"></div>
+        <div class="songControls">
+          <div class="leftControls">
+            <div class="play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="shuffle">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <div class="download">
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+          </div>
+          <div class="rightList">
+            <p>Lists</p>
+            <i class="fa-solid fa-list"></i>
+          </div>
+        </div>
+
+        <div class="titleHeading">
+          <div class="numTitlle">
+            <p>#</p>
+          </div>
+          <p>Artists</p>
+          <p>Title</p>
+          <p>Album</p>
+          <p>Date Added</p>
+          <i class="fa-regular fa-clock"></i>
+        </div>
+
+        <div class="likedSongList"></div>
+      </section>
+
+      <section class="playSection">
+        <h3>My Playlist</h3>
+        <div class="myPlaylistPlaying">
+          <div class="songImageTitle">
+            <img src="images/noImage.jpg" alt="" />
+            <span>
+              <p>xxxx</p>
+              <p>xxxx</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="about">
+          <img src="images/noImage.jpg" alt="" />
+          <span> <p>xxxx</p></span>
+          <div class="follow">
+            <p>xxxx</p>
+            <button>Follow</button>
+          </div>
+          <span>
+            <p>xxxx</p>
+          </span>
+        </div>
+
+        <div class="credits">
+          <div class="creditHead">
+            <h3>Credits</h3>
+            <p>xxxx</p>
+            <p>xxxx</p>
+            <p>xxxxx</p>
+          </div>
+        </div>
+
+        <div class="nextQuene">
+          <div class="queueHead">
+            <h3>Next in queue</h3>
+            <p>Open queue</p>
+          </div>
+          <div class="queueSong">
+            <img src="images/noImage.jpg" alt="" />
+            <div class="queueSongText">
+              <p>xxxx</p>
+              <p>xxxx</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="showBody">
+        <div class="showBodyContainer">
+          <h3>Give your playlist a name</h3>
+          <input
+            type="text"
+            class="showBodyInput"
+            placeholder="Enter name of playlist"
+          />
+          <div class="showButtons">
+            <button class="cancel">cancel</button>
+            <button class="create">Create</button>
+          </div>
+        </div>
+      </div>
+      <div class="spinner"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

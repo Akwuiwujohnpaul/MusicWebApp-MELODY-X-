@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="spinner.css" />
+    <title>Search</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="sideBar">
+        <div class="logo">
+          <i class="fa-solid fa-wave-square"></i>
+          <h3>Melody<span class="x">X</span></h3>
+        </div>
+
+        <div class="optionContainer">
+          <a href="index.html">
+            <div class="options homePage">
+              <i class="fa-solid fa-house"></i>
+              <p>Home</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-brands fa-itunes-note"></i>
+            <p>Trending</p>
+          </div>
+
+          <a href="search.html" class="searchPage">
+            <div class="options">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Search</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-regular fa-heart"></i>
+            <p>Favorites</p>
+          </div>
+
+          <a href="playlist.html">
+            <div class="options playlistPage">
+              <i class="fa-regular fa-headphones"></i>
+              <p>Playlists</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="library">
+          <h3 class="libHead">LIBRARY</h3>
+
+          <a href="likedSongs.html">
+            <div class="options likedSongsPage">
+              <i class="fa-regular fa-heart"></i>
+              <p>Liked Songs</p>
+            </div>
+          </a>
+
+          <a href="albums.html">
+            <div class="options">
+              <i class="fa-solid fa-image"></i>
+              <p>Albums</p>
+            </div>
+          </a>
+
+          <a href="artists.html">
+            <div class="options">
+              <i class="fa-regular fa-headphones"></i>
+              <p>Artists</p>
+            </div>
+          </a>
+
+          <a>
+            <div class="options">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <p>Recently Played</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="playLists">
+          <div class="playlistHeader">
+            <h3>PLAYLISTS</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <button class="newPlaylistButton">
+            <i class="fa-solid fa-plus"></i> <span>New Playlist</span>
+          </button>
+        </div>
+      </section>
+
+      <form action="search.html" class="searchForm">
+        <section class="sectionMain">
+          <div class="mainBody">
+            <!-- Existing Header -->
+            <div class="mainBodyHeader">
+              <div class="input">
+                <input
+                  class="search"
+                  type="text"
+                  name="search-term"
+                  placeholder="Search songs, artists, albums..."
+                />
+              </div>
+
+              <div class="right">
+                <div class="toggle">
+                  <i class="fa-solid fa-sun"></i>
+                  <i class="fa-regular fa-moon"></i>
+                </div>
+
+                <div class="notification">
+                  <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div class="user">
+                  <img src="images/luffy.png" alt="" class="userImage" />
+                </div>
+              </div>
+            </div>
+
+            <div class="searchContent">
+              <section class="popularSearches">
+                <h3>Liked Songs</h3>
+              </section>
+
+              <div class="songCard">
+                <img src="images/weeknd.jpg" alt="" />
+
+                <button class="playBtn">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+
+                <div class="songInfo">
+                  <h4>Blinding Lights</h4>
+                  <p>The Weeknd</p>
+                  <span>After Hours</span>
+                </div>
+
+                <div class="songMeta">
+                  <span class="time">3:20</span>
+                  <span>Pop</span>
+                </div>
+
+                <div class="songActions">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="spinner"></div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

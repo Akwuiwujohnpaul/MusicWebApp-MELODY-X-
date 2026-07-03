@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melody</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="spinner.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="swiper.css" />
+  </head>
+  <body>
+    <div class="container showNewPlaylist">
+      <section class="sideBar">
+        <a href="index.html">
+          <div class="logo">
+            <i class="fa-solid fa-wave-square"></i>
+            <h3>Melody<span class="x">X</span></h3>
+          </div>
+        </a>
+
+        <div class="optionContainer">
+          <a href="index.html">
+            <div class="options homePage">
+              <i class="fa-solid fa-house"></i>
+              <p>Home</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-brands fa-itunes-note"></i>
+            <p>Trending</p>
+          </div>
+
+          <a href="search.html" class="searchPage">
+            <div class="options">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Search</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-regular fa-heart"></i>
+            <p>Favorites</p>
+          </div>
+
+          <a href="playlist.html">
+            <div class="options playlistPage">
+              <i class="fa-regular fa-headphones"></i>
+              <p>Playlists</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="library">
+          <h3 class="libHead">LIBRARY</h3>
+
+          <a href="likedSongs.html">
+            <div class="options likedSongsPage">
+              <i class="fa-regular fa-heart"></i>
+              <p>Liked Songs</p>
+            </div>
+          </a>
+
+          <div class="options">
+            <i class="fa-solid fa-image"></i>
+            <p>Albums</p>
+          </div>
+
+          <div class="options">
+            <i class="fa-regular fa-headphones"></i>
+            <p>Artists</p>
+          </div>
+
+          <div class="options">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <p>Recently Played</p>
+          </div>
+        </div>
+
+        <div class="playLists">
+          <div class="playlistHeader">
+            <h3>PLAYLISTS</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="playListInput"></div>
+        </div>
+        <button class="newPlaylistButton">
+          <i class="fa-solid fa-plus"></i> <span>New Playlist</span>
+        </button>
+      </section>
+
+      <form action="search.html" class="indexForm">
+        <section class="sectionMain">
+          <div class="mainBody">
+            <div class="mainBodyHeader">
+              <div class="input">
+                <input
+                  class="search"
+                  type="text"
+                  name="search-term"
+                  placeholder="Search songs, artists, albums..."
+                />
+              </div>
+              <div class="right">
+                <div class="toggle">
+                  <i class="fa-solid fa-sun"></i>
+                  <i class="fa-regular fa-moon"></i>
+                </div>
+                <div class="notification">
+                  <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="user">
+                  <img src="images/luffy.png" alt="" class="userImage" />
+                </div>
+              </div>
+            </div>
+            <div class="greeting">
+              <h1>Good evening, Alex</h1>
+              <p>Enjoy your favourite music and discover something new</p>
+            </div>
+            <div class="trending">
+              <h3>Trending Now</h3>
+              <div class="trendingBoxes">
+                <div class="swiper">
+                  <div class="swiper-wrapper"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popular">
+              <div class="popularHeading">
+                <h2>Popular Songs</h2>
+                <p>View all</p>
+              </div>
+
+              <div class="songs"></div>
+            </div>
+          </div>
+        </section>
+      </form>
+
+      <div class="showBody">
+        <div class="showBodyContainer">
+          <h3>Give your playlist a name</h3>
+          <input
+            type="text"
+            class="showBodyInput"
+            placeholder="Enter name of playlist"
+          />
+          <div class="showButtons">
+            <button class="cancel">cancel</button>
+            <button class="create">Create</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

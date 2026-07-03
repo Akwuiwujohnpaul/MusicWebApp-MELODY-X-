@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.swiper {
+  margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-slide {
+  width: 100%;
+  height: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.swiper-slide:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.swiper img {
+  width: 12rem;
+}
