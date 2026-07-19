@@ -382,9 +382,7 @@ async function searchAPIData() {
     return;
   }
 
-  const { data } = await fetchAPIData(
-    `search?q=${encodeURIComponent(searchTerm)}`,
-  );
+  const { data } = await fetchAPIData(`search?q=${searchTerm}`);
 
   if (!data) {
     console.log("No search results found.");
@@ -392,7 +390,6 @@ async function searchAPIData() {
   }
   displaySearchResult(data);
 }
-
 //Display search result
 async function displaySearchResult(data) {
   const searchResult = document.querySelector(".results");
