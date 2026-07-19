@@ -507,13 +507,11 @@ async function displaySearchResult(data) {
   });
 }
 
-// song preview on Now Playing page
 async function playPreview() {
   const audio = document.querySelector(".audio");
-
   const urlParams = new URLSearchParams(window.location.search);
   const trackId = urlParams.get("id");
-  const data = await searchAPIData(`track/${trackId}`);
+  const data = await fetchAPIData(`track/${trackId}`);
 
   audio.src = data.preview;
 
@@ -532,9 +530,6 @@ async function playPreview() {
       play.classList.add("fa-play");
     }
   });
-  // audio.addEventListener("timeupdate", () => {
-  //   control.value = (audio.currentTime / audio.duration) * 100 || 0;
-  // });
   control.addEventListener("input", () => {
     audio.currentTime = (control.value / 100) * audio.duration;
   });
