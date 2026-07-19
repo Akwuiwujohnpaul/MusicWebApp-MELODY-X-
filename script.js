@@ -714,7 +714,9 @@ function hideSpinner() {
 
 // Init App
 async function init() {
-  if (global.currentPage == "/index.html" || global.currentPage == "/") {
+  const page = global.currentPage.toLowerCase();
+
+  if (page === "/index.html" || page === "/") {
     showSpinner();
     await Promise.all([
       displayTrendingMusic(),
@@ -722,19 +724,19 @@ async function init() {
       displayAddedPlaylists(),
     ]);
     hideSpinner();
-  } else if (global.currentPage === "/playlist.html") {
+  } else if (page.includes("playlist")) {
     showSpinner();
     await Promise.all([playlistTracks(), displayAddedPlaylists()]);
     hideSpinner();
-  } else if (global.currentPage === "/search.html") {
+  } else if (page.includes("search")) {
     showSpinner();
     await searchAPIData();
     hideSpinner();
-  } else if (global.currentPage === "/likedSongs.html") {
+  } else if (page.includes("likedsongs")) {
     showSpinner();
     await displayLikedSongs();
     hideSpinner();
-  } else if (global.currentPage.toLowerCase().includes("nowplaying")) {
+  } else if (page.includes("nowplaying")) {
     showSpinner();
     await Promise.all([playMusic(), playPreview()]);
     hideSpinner();
@@ -749,16 +751,18 @@ function highlightActiveLink() {
   const likedSongs = document.querySelector(".likedSongsPage");
   const search = document.querySelector(".searchPage");
 
-  if (global.currentPage === "/index.html") {
+  const page = global.currentPage.toLowerCase();
+
+  if (page === "/index.html" || page === "/") {
     home.style.background = "#8b5cf6";
     home.style.borderRadius = "0.4rem";
-  } else if (global.currentPage === "/playlist.html") {
+  } else if (page.includes("playlist")) {
     playlist.style.background = "#8b5cf6";
     playlist.style.borderRadius = "0.4rem";
-  } else if (global.currentPage === "/likedSongs.html") {
+  } else if (page.includes("likedsongs")) {
     likedSongs.style.background = "#8b5cf6";
     likedSongs.style.borderRadius = "0.4rem";
-  } else if (global.currentPage === "/search.html") {
+  } else if (page.currentPage === "/search.html") {
     search.style.background = "#8b5cf6";
     search.style.borderRadius = "0.4rem";
   }
