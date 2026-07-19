@@ -566,20 +566,27 @@ function closePopup() {
   showBody.classList.remove("active");
 }
 
-document
-  .querySelector(".newPlaylistButton")
-  .addEventListener("click", openPopup);
+const newPlaylistButton = document.querySelector(".newPlaylistButton");
+if (newPlaylistButton) {
+  newPlaylistButton.addEventListener("click", openPopup);
+}
 
-document.querySelector(".cancel").addEventListener("click", closePopup);
+const cancelButton = document.querySelector(".cancel");
+if (cancelButton) {
+  cancelButton.addEventListener("click", closePopup);
+}
 
-document.querySelector(".create").addEventListener("click", () => {
-  const playlistName = document.querySelector(".showBodyInput").value.trim();
-  if (playlistName) {
-    setPlaylistsToStorage({ name: playlistName, tracks: [] });
-    displayAddedPlaylists();
-    closePopup();
-  }
-});
+const createButton = document.querySelector(".create");
+if (createButton) {
+  createButton.addEventListener("click", () => {
+    const playlistName = document.querySelector(".showBodyInput").value.trim();
+    if (playlistName) {
+      setPlaylistsToStorage({ name: playlistName, tracks: [] });
+      displayAddedPlaylists();
+      closePopup();
+    }
+  });
+}
 
 function displayAddedPlaylists() {
   const playlist = document.querySelector(".playLists");
