@@ -530,8 +530,15 @@ async function playPreview() {
       play.classList.add("fa-play");
     }
   });
+
+  audio.addEventListener("timeupdate", () => {
+    control.value = (audio.currentTime / audio.duration) * 100 || 0;
+  });
+
   control.addEventListener("input", () => {
-    audio.currentTime = (control.value / 100) * audio.duration;
+    if (!isNaN(audio.duration)) {
+      audio.currentTime = (control.value / 100) * audio.duration;
+    }
   });
 }
 
