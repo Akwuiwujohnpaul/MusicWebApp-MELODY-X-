@@ -4,12 +4,11 @@ const global = {
 
 // Fetch Data from API
 async function fetchAPIData(endpoint) {
-  const CORS_PROXY = "https://corsproxy.io/?url=";
-  const API_URL = "https://api.deezer.com/";
+  const PROXY_URL = "/.netlify/functions/deezer-proxy";
 
   try {
     const response = await fetch(
-      `${CORS_PROXY}${encodeURIComponent(API_URL + endpoint)}`,
+      `${PROXY_URL}?endpoint=${encodeURIComponent(endpoint)}`,
     );
 
     if (!response.ok) {
