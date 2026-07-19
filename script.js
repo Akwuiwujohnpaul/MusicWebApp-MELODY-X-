@@ -709,7 +709,7 @@ function hideSpinner() {
 
 // Init App
 async function init() {
-  if (global.currentPage == "/index.html") {
+  if (global.currentPage == "/index.html" || global.currentPage == "/") {
     showSpinner();
     await Promise.all([
       displayTrendingMusic(),
