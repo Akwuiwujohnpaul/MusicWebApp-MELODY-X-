@@ -734,7 +734,7 @@ async function init() {
     showSpinner();
     await displayLikedSongs();
     hideSpinner();
-  } else if (global.currentPage === "/nowPlaying.html") {
+  } else if (global.currentPage.toLowerCase().includes("nowplaying")) {
     showSpinner();
     await Promise.all([playMusic(), playPreview()]);
     hideSpinner();
