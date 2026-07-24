@@ -174,12 +174,22 @@ a:visited {
 
 .search,
 .nowPlayingInput {
-  width: 35rem;
-  padding: 0.7rem;
+  width: 100%;
+  max-width: 30rem;
+  min-width: 0;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  box-sizing: border-box;
   border-radius: 10rem;
   border: 1px solid white;
   background-color: #080b14;
   color: #ffffff;
+}
+
+.indexForm,
+.mainBodyHeader,
+.input {
+  min-width: 0;
 }
 
 .indexForm {
@@ -834,7 +844,6 @@ a:visited {
   align-items: center;
   border-radius: 1rem;
 }
-
 .showBodyContainer h3 {
   color: white;
 }
@@ -875,6 +884,24 @@ a:visited {
   display: grid;
 }
 
+.skeleton-card {
+  width: 12rem;
+  height: 16rem;
+  background: linear-gradient(90deg, #1e1e2f 25%, #2a2a3d 50%, #1e1e2f 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .mainBodyHeader {
     display: grid;
@@ -885,5 +912,96 @@ a:visited {
   .songs {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .song-row {
+    grid-template-columns: 60px 2fr 80px 40px; /* drop artist + album columns */
+  }
+
+  .song-artist,
+  .song-album {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .song-row {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+  .song-duration {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .likedSongTitle {
+    grid-template-columns: 40px 1fr 1.5fr 40px;
+  }
+
+  .likedSongTitle p:nth-of-type(3),
+  .likedSongTitle p:nth-of-type(4),
+  .playSection {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .titleHeading {
+    grid-template-columns: 40px 1fr 1.5fr 40px;
+  }
+
+  .titleHeading p:nth-of-type(3),
+  .titleHeading p:nth-of-type(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .favouriteHeader {
+    flex-direction: column;
+    height: auto; /* stop forcing a fixed height */
+    min-height: 20rem; /* keep a reasonable minimum if you want */
+    align-items: center;
+    text-align: center;
+    padding-block: 2rem;
+  }
+
+  .image img {
+    height: 15rem; /* shrink the artist image too */
+    width: 15rem;
+  }
+
+  .playlistInfo h2 {
+    font-size: clamp(
+      1.8rem,
+      8vw,
+      3rem
+    ); /* scales down instead of overflowing */
+  }
+
+  .playlistInfo p {
+    display: none;
+  }
+}
+
+@media (max-width: 525px) {
+  .songInfo span,
+  .fa-ellipsis-vertical,
+  .songMeta span:nth-of-type(2) {
+    display: none;
   }
 }

@@ -23,11 +23,20 @@ async function fetchAPIData(endpoint) {
   }
 }
 
+function showSkeletons(container, count = 6) {
+  container.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+    const skeleton = document.createElement("div");
+    skeleton.className = "skeleton-card";
+    container.appendChild(skeleton);
+  }
+}
+
 // Display trending music tracks
 async function displayTrendingMusic() {
+  const container = document.querySelector(".popular .songs");
   const { tracks } = await fetchAPIData("chart");
   const trackList = tracks.data;
-  const container = document.querySelector(".popular");
 
   trackList.forEach((music, index) => {
     const songData = {
@@ -82,6 +91,7 @@ async function displayTrendingMusic() {
     });
 
     container.appendChild(div);
+    div.classList.add("loaded");
   });
 }
 
@@ -186,7 +196,7 @@ async function displaySlider() {
 function initSwipper() {
   const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 10,
     loop: true,
     freeMode: true,
     autoplay: {
