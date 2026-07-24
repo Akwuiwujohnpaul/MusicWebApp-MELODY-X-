@@ -1001,7 +1001,10 @@ a:visited {
 @media (max-width: 525px) {
   .songInfo span,
   .fa-ellipsis-vertical,
-  .songMeta span:nth-of-type(2) {
+  .songMeta span:nth-of-type(2),
+  .right,
+  .queueSong,
+  .fa-expand {
     display: none;
   }
 }
